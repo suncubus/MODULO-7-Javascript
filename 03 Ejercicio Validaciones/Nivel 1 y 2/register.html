@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO DE REGISTRO</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    
+    <!-- FONTAWESOME CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    
+    <!-- Custom styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!--PSelect Libreria javascript para rellenar selects con las provincias y municipios -->
+    <script type="text/javascript" src="js/pselect.js"></script>
+    
+
+</head>
+<body>
+  <div class="container-fluid"> 
+		<div class="vh-100 row justify-content-center align-items-center">
+			<div class="col-12 col-sm-8 col-lg-6">
+				<!--formulario-->
+				<div class="card border-dark">
+					<div class="card-header bg-warning">
+                        <i class="fas fa-user user-icon text-light"></i>
+                        <h4 class="text-light">FORMULARIO DE REGISTRO</h4>
+                    </div>
+				<div class="card-body">
+					<form class="row g-2 needs-validation" method="POST" action="#" onsubmit="return validate()" name="lform" id="lform">
+                        <div class="form-group col-md-6">
+                            <label for="usrName">Nombre</label>
+                            <input type="text" name="usrName" class="form-control" id="usrName">
+                            <div class="invalid-feedback" id="invalidUsrName"></div>
+                            
+                            <label for="email">Email</label>
+                            <input type="text" name="email" class="form-control" id="email">
+                            <div class="invalid-feedback" id="invalidEmail"></div>
+
+                            <label for="password">Contraseña</label>
+                            <input type="password" name="password"  class="form-control" id="password">
+                            <span class="fa fa-fw fa-eye password-icon" id="showPassword" onclick="fShowPassword()"></span>
+                            <div class="invalid-feedback" id="invalidPassword"></div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="surName">Apellidos</label>
+                            <input type="text" name="surName" class="form-control" id="surName">
+                            <div class="invalid-feedback" id="invalidSurName"></div>
+
+                            <label for="user">Nombre de Usuario</label>
+                            <input type="text" name="user" class="form-control" id="user">
+                            <div class="invalid-feedback" id="invalidUser"></div>
+
+                            <label for="password2">Repetir Contraseña</label>
+                            <input type="password" name="password2"  class="form-control" id="password2">
+                            <div class="invalid-feedback" id="invalidPassword2"></div>
+                        </div>   
+                   
+                        <div class="form-group col-md-6">
+                            <label for="street">Dirección</label>
+                            <input type="text" name="street" class="form-control" id="street">
+                            <div class="invalid-feedback" id="invalidStreet"></div>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="numStreet">Número</label>
+                            <input type="text" name="numStreet" class="form-control" id="numStreet">
+                            <div class="invalid-feedback" id="invalidNumStreet"></div>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="floor">Piso</label>
+                            <input type="text" name="floor" class="form-control" id="floor">
+                            <div class="invalid-feedback" id="invalidFloor"></div>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="letter">Letra</label>
+                            <input type="text" name="letter" class="form-control" id="letter">
+                            <div class="invalid-feedback" id="invalidLetter"></div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <select id="ps-prov" class="form-select" name="ps-prov">
+                            </select>
+                            <div class="invalid-feedback" id="invalidProv"></div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <select id="ps-mun" class="form-select" name="ps-mun">
+                            </select>
+                            <div class="invalid-feedback" id="invalidMun"></div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            
+                            <input type="text" name="code" class="form-control"  id="code" disabled>
+                        </div>
+
+                      
+
+                      
+                      
+                      
+                      
+                  
+        
+
+
+                  
+         
+							
+							<button type="submit" class="btn btn-warning">Login</button>
+						</form>
+					</div>
+				</div>
+				<!--fin formulario-->
+			</div>
+		</div>
+	</div>
+
+    <!--Bootstrap jquery popper-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+    <script src="js/scriptRegister.js" ></script>
+</body>
+</html>
