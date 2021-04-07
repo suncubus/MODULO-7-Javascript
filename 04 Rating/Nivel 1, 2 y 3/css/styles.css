@@ -1,0 +1,39 @@
+/*Resetea todos los estilos del navegador */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Contenedor flex centrado*/
+#container {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  width: 100vw;
+  height: 100vh;
+}
+
+#container a {
+  font-size: 6rem;
+  cursor: pointer;
+  color: grey;
+}
+/*:focus // Un elemento está en estado «enfocado» cuando es el elemento actualmente seleccionado 
+y listo para recibir acciones.
+El estado :focus, tiene una duración indefinida (al contrario que active). 
+Mientras no se seleccione otro elemento, el elemento permanecerá enfocado.*/
+#container a:hover,
+#container a:hover ~ a,
+#container a:focus,
+#container a:focus ~ a{
+			color: yellow;
+			cursor: pointer;
+		}
+
+@media (max-width: 840px) {
+  #container {
+    flex-direction: column-reverse;
+  }
+}
